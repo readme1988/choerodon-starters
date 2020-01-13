@@ -28,13 +28,23 @@ public class NotifyBusinessTypeScanData {
 
     private Boolean webhookEnabledFlag;
 
+    private String[] targetUserType;
+
+    private String notifyType;
+
+    private Boolean proEmailEnabledFlag;
+
+    private Boolean proPmEnabledFlag;
+
     public NotifyBusinessTypeScanData() {
     }
 
     public NotifyBusinessTypeScanData(String code, String name, String description,
                                       String level, Integer retryCount,
                                       Boolean isSendInstantly, Boolean isManualRetry, Boolean isAllowConfig,
-                                      String categoryCode, Boolean emailEnabledFlag, Boolean pmEnabledFlag, Boolean smsEnabledFlag, Boolean webhookEnabledFlag) {
+                                      String categoryCode, Boolean emailEnabledFlag, Boolean pmEnabledFlag, Boolean smsEnabledFlag, Boolean webhookEnabledFlag,
+                                      String[] targetUserType, String notifyType,
+                                      Boolean proEmailEnabledFlag, Boolean proPmEnabledFlag) {
         this.code = code;
         this.name = name;
         this.description = description;
@@ -48,6 +58,10 @@ public class NotifyBusinessTypeScanData {
         this.pmEnabledFlag = pmEnabledFlag;
         this.smsEnabledFlag = smsEnabledFlag;
         this.webhookEnabledFlag = webhookEnabledFlag;
+        this.targetUserType = targetUserType;
+        this.notifyType = notifyType;
+        this.proEmailEnabledFlag = proEmailEnabledFlag;
+        this.proPmEnabledFlag = proPmEnabledFlag;
     }
 
     public String getCode() {
@@ -154,4 +168,35 @@ public class NotifyBusinessTypeScanData {
         this.webhookEnabledFlag = webhookEnabledFlag;
     }
 
+    public String[] getTargetUserType() {
+        return targetUserType;
+    }
+
+    public void setTargetUserType(String[] targetUserType) {
+        this.targetUserType = targetUserType;
+    }
+
+    public String getNotifyType() {
+        return notifyType;
+    }
+
+    public void setNotifyType(String notifyType) {
+        this.notifyType = notifyType;
+    }
+
+    public Boolean getProEmailEnabledFlag() {
+        return proEmailEnabledFlag;
+    }
+
+    public void setProEmailEnabledFlag(Boolean proEmailEnabledFlag) {
+        this.proEmailEnabledFlag = proEmailEnabledFlag;
+    }
+
+    public Boolean getProPmEnabledFlag() {
+        return proPmEnabledFlag;
+    }
+
+    public void setProPmEnabledFlag(Boolean proPmEnabledFlag) {
+        this.proPmEnabledFlag = proPmEnabledFlag;
+    }
 }
